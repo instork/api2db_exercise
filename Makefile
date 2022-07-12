@@ -7,6 +7,8 @@ env:
 
 setup:
 	conda install --file requirements.txt $(addprefix -c ,$(CONDA_CH))
+	conda install --file requirements-dev.txt $(addprefix -c ,$(CONDA_CH))
+	pip install -r requirements-pip.txt
 	pre-commit install
 
 format:
